@@ -51,6 +51,17 @@
     display:inline-block; 
     background:var(--cupink); 
   }
+  .button-row {
+    display: flex;
+    gap: 12px; /* Adds space between the buttons */
+  }
+
+  .button-row nav a.alt {
+    flex: 1; /* Forces both buttons to take equal width */
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
   nav a.alt:hover { background:#0b5649; }
   :focus-visible { outline:3px solid #7fc4b6; outline-offset:2px; }
   .hint { color:var(--muted); font-size:.875rem; margin-top:20px; }
@@ -71,8 +82,10 @@
 
   <nav>
     <a data-page="">Search SOP · ค้นหา SOP</a>
-    <a class="alt" data-page="submit">Submit SOP · ส่งเอกสาร (staff)</a>
-    <a class="alt" data-page="admin">Admin · ผู้ดูแลระบบ</a>
+    <div class="button-row">
+      <a class="alt" data-page="submit">Submit SOP · ส่งเอกสาร (staff)</a>
+      <a class="alt" data-page="admin">Admin · ผู้ดูแลระบบ</a>
+    </div>
   </nav>
 
   <p class="hint">Still see "access denied"? Open the link in a private (incognito) window, or sign out of your other Google accounts first.
