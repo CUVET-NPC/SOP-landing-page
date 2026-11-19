@@ -46,21 +46,16 @@
     text-decoration:none; 
     font-weight:600; 
   }
-  nav a:hover { background:#0b5649; }
+  nav a:hover { background:var(--bg); }
   .button-row {
-    display:flex;
+    display:grid;
+    grid-template-columns:1fr 1fr;
     gap:12px;
   }
 
   nav a.alt {
-    flex:1;
-    display:block;
-    width:100%;
-    box-sizing: border-box;
     padding:12px;
-    cursor:pointer;
   }
-  nav a.alt:hover { background:#0b5649; }
   :focus-visible { outline:3px solid #7fc4b6; outline-offset:2px; }
   .hint { color:var(--muted); font-size:.875rem; margin-top:20px; }
 </style>
